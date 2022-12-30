@@ -1,0 +1,547 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DataService.HostApi</name>
+    </assembly>
+    <members>
+        <member name="T:DataService.HostApi.Acivators.XcServiceBasedControllerActivator">
+            <summary>
+            基类控制器中的伪属性注入
+            </summary>
+        </member>
+        <member name="M:DataService.HostApi.Acivators.XcServiceBasedControllerActivator.Create(Microsoft.AspNetCore.Mvc.ControllerContext)">
+            <summary>
+            Create
+            </summary>
+            <param name="actionContext"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:DataService.HostApi.Acivators.XcServiceBasedControllerActivator.Release(Microsoft.AspNetCore.Mvc.ControllerContext,System.Object)">
+            <summary>
+            Release
+            </summary>
+            <param name="context"></param>
+            <param name="controller"></param>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:DataService.HostApi.AutoMapper.UserProfile">
+            <summary>
+            描述：
+            作者：xxx
+            创建日期：2022/8/16 16:41:20
+            版本：v1.0
+            =============================================================
+            历史更新记录
+            版本：v1.0      
+            修改人：
+            修改日期：
+            修改内容：
+            ==============================================================
+            </summary>
+        </member>
+        <member name="M:DataService.HostApi.AutoMapper.UserProfile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:DataService.HostApi.Controllers.AuthController">
+            <summary>
+            身份验证
+            </summary>
+        </member>
+        <member name="F:DataService.HostApi.Controllers.AuthController._requirement">
+            <summary>
+            自定义策略参数
+            </summary>
+        </member>
+        <member name="M:DataService.HostApi.Controllers.AuthController.#ctor(DataService.Application.Contracts.BaseInfo.IBaseUserImp,DataService.JWT.PermissionRequirement)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="iBaseUserImp"></param>
+            <param name="requirement"></param>
+        </member>
+        <member name="M:DataService.HostApi.Controllers.AuthController.Denied">
+            <summary>
+            无权访问
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataService.HostApi.Controllers.AuthController.Login(System.String,System.String)">
+            <summary>
+            登录
+            </summary>
+            <param name="account">账号</param>
+            <param name="password">密码</param>
+            <returns></returns>
+        </member>
+        <member name="T:DataService.HostApi.Controllers.Base.BaseController">
+            <summary>
+            基类控制器
+            </summary>
+        </member>
+        <member name="F:DataService.HostApi.Controllers.Base.BaseController.Configuration">
+            <summary>
+            公共配置
+            </summary>
+        </member>
+        <member name="F:DataService.HostApi.Controllers.Base.BaseController.Publisher">
+            <summary>
+            事件发布者
+            </summary>
+        </member>
+        <member name="F:DataService.HostApi.Controllers.Base.BaseController.Mapper">
+            <summary>
+            实体自动映射
+            </summary>
+        </member>
+        <member name="F:DataService.HostApi.Controllers.Base.BaseController.Logger">
+            <summary>
+            日志对象
+            </summary>
+        </member>
+        <member name="F:DataService.HostApi.Controllers.Base.BaseController.RedisService">
+            <summary>
+            Redis服务
+            </summary>
+        </member>
+        <member name="F:DataService.HostApi.Controllers.Base.BaseController.MongoRepository">
+            <summary>
+            Mongodb服务
+            </summary>
+        </member>
+        <member name="P:DataService.HostApi.Controllers.Base.BaseController.client">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="M:DataService.HostApi.Controllers.Base.BaseController.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:DataService.HostApi.Controllers.Base.BaseController.GetClientInformation">
+            <summary>
+            从TOKEN获取人员信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:DataService.HostApi.Controllers.Base.SwaggerController">
+            <summary>
+            swagger
+            </summary>
+        </member>
+        <member name="M:DataService.HostApi.Controllers.Base.SwaggerController.#ctor(Microsoft.AspNetCore.Hosting.IWebHostEnvironment,DataService.Swagger.SpireDocHelper,Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="hostingEnvironment"></param>
+            <param name="spireDocHelper"></param>
+            <param name="swaggerGenerator"></param>
+        </member>
+        <member name="M:DataService.HostApi.Controllers.Base.SwaggerController.ExportWord(System.String,System.String)">
+            <summary>
+            导出文件
+            </summary>
+            <param name="type">文件类型</param>
+            <param name="version">版本号</param>
+            <returns></returns>
+        </member>
+        <member name="T:DataService.HostApi.Controllers.Test.CapPublisherController">
+            <summary>
+            Cap分布式事务测试
+            </summary>
+        </member>
+        <member name="M:DataService.HostApi.Controllers.Test.CapPublisherController.TestCapPublisher">
+            <summary>
+            CAP发布消息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataService.HostApi.Controllers.Test.CapPublisherController.OrderCreatedEventHand(System.String)">
+            <summary>
+            监听事件  
+            </summary>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DataService.HostApi.Controllers.Test.GrpcServiceController">
+            <summary>
+            Grpc服务测试
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:DataService.HostApi.Controllers.Test.MongoDbController">
+            <summary>
+            MongoDb测试
+            </summary>
+        </member>
+        <member name="M:DataService.HostApi.Controllers.Test.MongoDbController.AddAsync">
+            <summary>
+            添加一条记录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:DataService.HostApi.Controllers.Test.MongoDbController.ATest">
+            <summary>
+            一个测试的类
+            </summary>
+        </member>
+        <member name="P:DataService.HostApi.Controllers.Test.MongoDbController.ATest.PartitionKey">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:DataService.HostApi.Controllers.Test.NlogController">
+            <summary>
+            Nlog测试
+            </summary>
+        </member>
+        <member name="M:DataService.HostApi.Controllers.Test.NlogController.TestNlog">
+            <summary>
+            测试Nlog
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:DataService.HostApi.Handlers.PermissionHandler">
+            <summary>
+            权限授权Handler
+            </summary>
+        </member>
+        <member name="P:DataService.HostApi.Handlers.PermissionHandler.Schemes">
+            <summary>
+            验证方案提供对象
+            </summary>
+        </member>
+        <member name="M:DataService.HostApi.Handlers.PermissionHandler.#ctor(Microsoft.AspNetCore.Authentication.IAuthenticationSchemeProvider,Microsoft.AspNetCore.Http.IHttpContextAccessor,Microsoft.Extensions.Logging.ILogger{DataService.HostApi.Handlers.PermissionHandler},DataService.Application.Contracts.BaseInfo.IBaseUserImp,DataService.Application.Contracts.BaseInfo.IBaseReqUrlImp,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            构造
+            </summary>
+            <param name="schemes"></param>
+            <param name="accessor"></param>
+            <param name="logger"></param>
+            <param name="iBaseUserImp"></param>
+            <param name="iBaseReqUrlImp"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:DataService.HostApi.Handlers.PermissionHandler.GetUserId">
+            <summary>
+            获取用户id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataService.HostApi.Handlers.PermissionHandler.HandleRequirementAsync(Microsoft.AspNetCore.Authorization.AuthorizationHandlerContext,DataService.JWT.PermissionRequirement)">
+            <summary>
+            HandleRequirementAsync
+            </summary>
+            <param name="context"></param>
+            <param name="requirement"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DataService.HostApi.Handlers.PermissionHandler.UrlAuth(Microsoft.AspNetCore.Authorization.AuthorizationHandlerContext,DataService.JWT.PermissionRequirement,Microsoft.AspNetCore.Authentication.AuthenticateResult,System.String,System.Nullable{System.Int32})">
+            <summary>
+            Url权限验证
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:DataService.HostApi.Jobs.IExcuteJobImp">
+            <summary>
+            描述：
+            作者：xxx
+            创建日期：2022/8/9 15:33:07
+            版本：v1.0
+            =============================================================
+            历史更新记录
+            版本：v1.0      
+            修改人：
+            修改日期：
+            修改内容：
+            ==============================================================
+            </summary>
+        </member>
+        <member name="M:DataService.HostApi.Jobs.IExcuteJobImp.Execute">
+            <summary>
+            执行任务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:DataService.HostApi.Jobs.QuartzTestJob">
+            <summary>
+            描述：Quartz定时任务
+            作者：Leopisces
+            创建日期：2022/8/9 13:54:29
+            版本：v1.0
+            =============================================================
+            历史更新记录
+            版本：v1.0      
+            修改人：
+            修改日期：
+            修改内容：
+            ==============================================================
+            </summary>
+        </member>
+        <member name="M:DataService.HostApi.Jobs.QuartzTestJob.Execute(Quartz.IJobExecutionContext)">
+            <summary>
+            执行任务
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DataService.HostApi.Jobs.ReqUrlCleanJob">
+            <summary>
+            描述：定时清理ReqUrl表
+            作者：Leppisces
+            创建日期：2022/8/9 15:17:20
+            版本：v1.0
+            =============================================================
+            历史更新记录
+            版本：v1.0      
+            修改人：
+            修改日期：
+            修改内容：
+            ==============================================================
+            </summary>
+        </member>
+        <member name="M:DataService.HostApi.Jobs.ReqUrlCleanJob.#ctor(DataService.Application.Contracts.BaseInfo.IBaseReqUrlImp,Microsoft.Extensions.Logging.ILogger{DataService.HostApi.Jobs.ReqUrlCleanJob})">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:DataService.HostApi.Jobs.ReqUrlCleanJob.Execute">
+            <summary>
+            执行任务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataService.HostApi.Jobs.ReqUrlCleanJob.ExecuteJob">
+            <summary>
+            执行任务
+            </summary>
+        </member>
+        <member name="T:DataService.HostApi.Program">
+            <summary>
+            Program
+            </summary>
+        </member>
+        <member name="M:DataService.HostApi.Program.Main(System.String[])">
+            <summary>
+            程序入口
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:DataService.HostApi.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            CreateHost
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DataService.HostApi.Socket.IServerHubImp">
+            <summary>
+            描述：
+            作者：xxx
+            创建日期：2022/8/9 16:09:31
+            版本：v1.0
+            =============================================================
+            历史更新记录
+            版本：v1.0      
+            修改人：
+            修改日期：
+            修改内容：
+            ==============================================================
+            </summary>
+        </member>
+        <member name="M:DataService.HostApi.Socket.IServerHubImp.GetAll">
+            <summary>
+            获取所有在线用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataService.HostApi.Socket.IServerHubImp.SendMessageAsync(DataService.Shared.Enums.MessageType,System.String,System.Object)">
+            <summary>
+            主动推送发送                         
+            </summary>
+            <param name="type"></param>
+            <param name="conn_id"></param>
+            <param name="msg"></param>
+        </member>
+        <member name="M:DataService.HostApi.Socket.IServerHubImp.SendMessageByUserAsync(DataService.Shared.Enums.MessageType,System.String,System.Object)">
+            <summary>
+            主动推送发送
+            </summary>
+            <param name="type"></param>
+            <param name="user_id"></param>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DataService.HostApi.Socket.IServerHubImp.SendMessageToAllAsync(DataService.Shared.Enums.MessageType,System.Object)">
+            <summary>
+            全员推送                         
+            </summary>
+            <param name="type"></param>
+            <param name="msg"></param>
+        </member>
+        <member name="T:DataService.HostApi.Socket.ServerHubImp">
+            <summary>
+            描述：ServerHub
+            作者：Leopisces
+            创建日期：2022/8/9 16:08:56
+            版本：v1.0
+            =============================================================
+            历史更新记录
+            版本：v1.0      
+            修改人：
+            修改日期：
+            修改内容：
+            ==============================================================
+            </summary>
+        </member>
+        <member name="F:DataService.HostApi.Socket.ServerHubImp._hubKey">
+            <summary>
+            redis字典信息缓存key
+            </summary>
+        </member>
+        <member name="M:DataService.HostApi.Socket.ServerHubImp.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor,Microsoft.AspNetCore.SignalR.IHubContext{DataService.HostApi.Socket.ServerHubImp},DataService.Redis.IRedisService,Microsoft.Extensions.Logging.ILogger{DataService.HostApi.Socket.ServerHubImp})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="accessor"></param>
+            <param name="hubContext"></param>
+            <param name="redisService"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:DataService.HostApi.Socket.ServerHubImp.GetAll">
+            <summary>
+            获取所有在线连接
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataService.HostApi.Socket.ServerHubImp.GetByConnId(System.String)">
+            <summary>
+            获取连接信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataService.HostApi.Socket.ServerHubImp.GetByUserId(System.String)">
+            <summary>
+            获取在线连接
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataService.HostApi.Socket.ServerHubImp.SetOnline(DataService.Shared.Models.OnLineUser)">
+            <summary>
+            保存连接信息
+            </summary>
+            <param name="info"></param>
+        </member>
+        <member name="M:DataService.HostApi.Socket.ServerHubImp.DeleteByConnId(System.String)">
+            <summary>
+            移除连接
+            </summary>
+            <param name="conn_id"></param>
+        </member>
+        <member name="M:DataService.HostApi.Socket.ServerHubImp.IsExist(System.String)">
+            <summary>
+            是否存在
+            </summary>
+            <param name="conn_id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DataService.HostApi.Socket.ServerHubImp.OnConnectedAsync">
+            <summary>
+            当连接成功时执行
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataService.HostApi.Socket.ServerHubImp.OnDisconnectedAsync(System.Exception)">
+            <summary>
+            当连接断开时的处理
+            </summary>
+        </member>
+        <member name="M:DataService.HostApi.Socket.ServerHubImp.SendMessageAsync(DataService.Shared.Enums.MessageType,System.String,System.Object)">
+            <summary>
+            指定连接推送                         
+            </summary>
+            <param name="type"></param>
+            <param name="conn_id"></param>
+            <param name="msg"></param>
+        </member>
+        <member name="M:DataService.HostApi.Socket.ServerHubImp.SendMessageByUserAsync(DataService.Shared.Enums.MessageType,System.String,System.Object)">
+            <summary>
+            指定用户推送                         
+            </summary>
+            <param name="type"></param>
+            <param name="user_id"></param>
+            <param name="msg"></param>
+        </member>
+        <member name="M:DataService.HostApi.Socket.ServerHubImp.SendMessageToAllAsync(DataService.Shared.Enums.MessageType,System.Object)">
+            <summary>
+            全员推送                         
+            </summary>
+            <param name="type"></param>
+            <param name="msg"></param>
+        </member>
+        <member name="T:DataService.HostApi.Startup">
+            <summary>
+            配置
+            </summary>
+        </member>
+        <member name="P:DataService.HostApi.Startup.Configuration">
+            <summary>
+            配置文件
+            </summary>
+        </member>
+        <member name="M:DataService.HostApi.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:DataService.HostApi.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:DataService.HostApi.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Hosting.IHostApplicationLifetime,DataService.Swagger.IApiInfo)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+            <param name="applicationLifetime"></param>
+            <param name="apiInfo"></param>
+        </member>
+        <member name="T:DataService.HostApi.TaskServices.TestBackGroudService">
+            <summary>
+            描述：
+            作者：xxx
+            创建日期：2022/8/9 10:59:31
+            版本：v1.0
+            =============================================================
+            历史更新记录
+            版本：v1.0      
+            修改人：
+            修改日期：
+            修改内容：
+            ==============================================================
+            </summary>
+        </member>
+        <member name="M:DataService.HostApi.TaskServices.TestBackGroudService.#ctor(Microsoft.Extensions.Logging.ILogger{DataService.HostApi.TaskServices.TestBackGroudService},DataService.Shared.Managers.TimingManager,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="logger"></param>
+            <param name="manager"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:DataService.HostApi.TaskServices.TestBackGroudService.ExecuteAsync(System.Threading.CancellationToken)">
+            <summary>
+            测试方法
+            </summary>
+            <param name="stoppingToken"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

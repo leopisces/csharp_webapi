@@ -1,0 +1,36 @@
+﻿using @Model.InterfaceSpace;
+using @Model.ModelSpace;
+using DataService.SqlSugarOrm;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace @Model.Namespace
+{
+    /// <summary>
+    /// 描述：@(Model.TableNameNo_)Imp
+    /// 作者：Leopisces
+    /// 创建日期：@Model.Date
+    /// 版本：v1.0
+    /// =============================================================
+    /// 历史更新记录
+    /// 版本：v1.0      
+    /// 修改人：
+    /// 修改日期：
+    /// 修改内容：
+    /// ==============================================================
+    /// </summary>
+    public class @(Model.TableNameNo_)Imp : BaseRepository<@(Model.TableName)>, I@(Model.TableNameNo_)Imp
+    {
+        public @(Model.TableNameNo_)Imp(IOptions<SugarOption> options, ILogger<@(Model.TableNameNo_)Imp> logger) : base(options, logger)
+        {
+        }
+
+        protected override SqlDatabaseEnum InitDB()
+        {
+            return SqlDatabaseEnum.ALIYUNDB;
+        }
+    }
+}

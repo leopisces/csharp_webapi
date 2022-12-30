@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DataService.Dto</name>
+    </assembly>
+    <members>
+        <member name="T:DataService.Dto.BaseInfo.ClientInformationDto">
+            <summary>
+            描述：登录用户信息
+            作者：Leopisces
+            创建日期：2022/8/16 16:37:11
+            版本：v1.0
+            =============================================================
+            历史更新记录
+            版本：v1.0      
+            修改人：
+            修改日期：
+            修改内容：
+            ==============================================================
+            </summary>
+        </member>
+        <member name="P:DataService.Dto.BaseInfo.ClientInformationDto.ID">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="P:DataService.Dto.BaseInfo.ClientInformationDto.Account">
+            <summary>
+            账号
+            </summary>
+        </member>
+        <member name="P:DataService.Dto.BaseInfo.ClientInformationDto.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:DataService.Dto.BaseInfo.ClientInformationDto.Phone">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="T:DataService.Dto.BaseInfo.LoginInfoDto">
+            <summary>
+            描述：用户登录信息
+            作者：Leopisces
+            创建日期：2022/8/16 16:35:20
+            版本：v1.0
+            =============================================================
+            历史更新记录
+            版本：v1.0      
+            修改人：
+            修改日期：
+            修改内容：
+            ==============================================================
+            </summary>
+            <summary>
+            用户登录信息
+            </summary>
+        </member>
+        <member name="P:DataService.Dto.BaseInfo.LoginInfoDto.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:DataService.Dto.BaseInfo.LoginInfoDto.AccessToken">
+            <summary>
+            身份令牌
+            </summary>
+        </member>
+        <member name="P:DataService.Dto.BaseInfo.LoginInfoDto.ExpiresIn">
+            <summary>
+            有效期
+            </summary>
+        </member>
+        <member name="P:DataService.Dto.BaseInfo.LoginInfoDto.TokenType">
+            <summary>
+            身份令牌类型
+            </summary>
+        </member>
+        <member name="P:DataService.Dto.BaseInfo.LoginInfoDto.BasicInfo">
+            <summary>
+            基本信息
+            </summary>
+        </member>
+        <member name="P:DataService.Dto.BaseInfo.LoginInfoDto.ResetPwd">
+            <summary>
+            是否需要重置密码
+            </summary>
+        </member>
+    </members>
+</doc>

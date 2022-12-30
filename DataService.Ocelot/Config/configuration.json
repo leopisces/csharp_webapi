@@ -1,0 +1,35 @@
+{
+  "Routes": [
+    {
+      //网关转发到下游格式
+      "DownstreamPathTemplate": "/weatherforecast",
+      "DownstreamScheme": "http",
+      //下游服务配置
+      "DownstreamHostAndPorts": [
+        {
+          //下游地址
+          "Host": "127.0.0.1",
+          //下游端口号
+          "Port": 6000
+        }
+      ],
+      //上游Api请求格式
+      "UpstreamPathTemplate": "/todos",
+      //上下游支持请求方法
+      "UpstreamHttpMethod": [ "GET", "POST", "DELETE", "PUT" ]
+    },
+    {
+      "DownstreamPathTemplate": "/weatherforecast",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "127.0.0.1",
+
+          "Port": 6001
+        }
+      ],
+      "UpstreamPathTemplate": "/todoss",
+      "UpstreamHttpMethod": [ "Get" ]
+    }
+  ]
+}

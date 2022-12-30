@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<OutputType>Exe</OutputType>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="RazorEngine.NetCore" Version="2.2.6" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\DataService.Shared\DataService.Shared.csproj" />
+	  <ProjectReference Include="..\DataService.SqlSugarOrm\DataService.SqlSugarOrm.csproj" />
+	</ItemGroup>
+
+</Project>

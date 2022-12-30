@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DataService.Application.Contracts\DataService.Application.Contracts.csproj" />
+    <ProjectReference Include="..\DataService.Domain\DataService.Domain.csproj" />
+    <ProjectReference Include="..\DataService.SqlSugarOrm\DataService.SqlSugarOrm.csproj" />
+  </ItemGroup>
+
+</Project>

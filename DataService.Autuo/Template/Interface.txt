@@ -1,0 +1,22 @@
+﻿using @Model.ModelSpace;
+using DataService.SqlSugarOrm;
+
+namespace @Model.Namespace
+{
+    /// <summary>
+    /// 描述：I@(Model.TableNameNo_)Imp
+    /// 作者：Leopisces
+    /// 创建日期：@Model.Date
+    /// 版本：v1.0
+    /// =============================================================
+    /// 历史更新记录
+    /// 版本：v1.0      
+    /// 修改人：
+    /// 修改日期：
+    /// 修改内容：
+    /// ==============================================================
+    /// </summary>
+    public interface I@(Model.TableNameNo_)Imp : IBaseRepository<@(Model.TableName)>
+    {
+    }
+}
